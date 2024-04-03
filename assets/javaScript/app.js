@@ -9,6 +9,7 @@ const weatherIcon = document.getElementById("weather_icon");
 const hourleyDiv = document.getElementById("hourly_forcast");
 // const daysDiv = document.getElementById("days_items");
 const weatherType = document.getElementById("weather_type");
+const date = document.getElementById("date");
 
 
 
@@ -117,7 +118,9 @@ function displayWeather(data){
     console.log("error");
   }else{
     Town.innerHTML = data.location.name+" , "+data.location.region;
-    Country.innerHTML = data.location.country;    
+    Country.innerHTML = data.location.country; 
+    const time = formatDate(data.location.localtime);
+    date.innerHTML = time;
     Tempreture.innerHTML = Math.round(data.current.temp_c);
     const icon = data.current.condition.icon;
     const condition = data.current.condition.text;
@@ -216,10 +219,19 @@ function formatDate(dateString) {
 }
 
 function backgroundChange(code){
-
-  // if (code == ) {
-    
-  // }
+  
+  const rainyValues = [1240,1189,1063,1195,1009];
+  const snowValues = [1117,1114,1204,1225];
+   if (rainyValues.includes(code)) {
+    document.body.style.backgroundImage = "url('assets/CSS/Rain.mp4')";
+    document.body.style.backgroundSize = "100% 100%";
+   }else if (snowValues.includes(code)) {
+    document.body.style.backgroundImage = "url('assets/CSS/Snow.mp4')";
+    document.body.style.backgroundSize = "100% 100%"
+   }else{
+    document.body.style.backgroundImage = "url('assets/CSS/SunnySky.mp4')";
+    document.body.style.backgroundSize = "100% 100%";
+   }
 
 }
 
