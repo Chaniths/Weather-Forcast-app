@@ -77,7 +77,7 @@ body{
     justify-content: space-between;
     padding: 20px;
     margin: 20px 0;
-    background: rgba(145, 142, 142, 0.778);
+    background: rgba(182, 178, 178, 0.778);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 1px );
     -webkit-backdrop-filter: blur( 1px );
@@ -97,6 +97,12 @@ body{
     color: white;
     padding: 40px;
 
+}
+
+#hourly_items:hover{
+    background-color: rgb(46, 47, 48);
+    border-radius: 10px;
+    
 }
 
 .hourley_items img{
