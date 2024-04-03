@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+</head>
+<body>
+    <img id ="imgLocationIcon" width="32" height="32" src="https://img.icons8.com/pastel-glyph/64/000000/marker--v2.png" alt="marker--v2"/>
+    <p id="location"></p> 
+    <p id="country"></p> 
+
+    <div id="citySearch">
+        <img width="30" height="30" src="https://img.icons8.com/ios/50/search-in-cloud.png" alt="search-in-cloud"/>
+        <input type="text" id="txtSearch"> 
+        <input type="button" id = "btnSearch" value="Search City" onclick="getUserTypedWeather()">
+    </div>
+
+    
+
+
+    <div id="top">  
+
+       <h1 id="tempretute"></h1>
+       <img id="weather_icon" alt="weather icon">
+       <p id="weather_type"></p>
+            
+    </div>
+    
+    <section id="hourly_forcast">
+
+       <div id="hourly_items">
+        
+        
+       </div>
+
+
+
+    </section>
+
+    <script src="assets/javaScript/app.js"></script>
+</body>
+</html>
