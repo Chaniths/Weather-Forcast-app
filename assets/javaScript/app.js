@@ -235,6 +235,25 @@ function backgroundChange(code){
 
 }
 
+function ChangeMode() { 
+  // Obtains an array of all <link> 
+  // elements. 
+  // Select your element using indexing. 
+  var theme = document.getElementsByTagName('link')[0]; 
+
+  // Change the value of href attribute  
+  // to change the css sheet. 
+  if (theme.getAttribute('href') == 'assets/CSS/lightTheme.css') { 
+      theme.setAttribute('href', 'assets/CSS/darkTheme.css');
+      document.body.style.backgroundImage = "url('assets/CSS/DarkTheme.mp4')";
+      document.body.style.backgroundSize = "100% 100%"; 
+  } else { 
+      theme.setAttribute('href','assets/CSS/lightTheme.css'); 
+      document.body.style.backgroundImage = "url('assets/CSS/SunnySky.mp4')";
+      document.body.style.backgroundSize = "100% 100%"; 
+  } 
+} 
+
 
 //auto calling the location when logging  the account
 Window.onload = getlocation();

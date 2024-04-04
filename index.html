@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecast</title>
-    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link id="theme" rel="stylesheet" 
+        type="text/css" href="assets/CSS/lightTheme.css" /> 
 </head>
 <body>
+    <input type="button" id="ChangeMode" value="ChangeMode" onclick="ChangeMode()">
     <img id ="imgLocationIcon" width="32" height="32" src="https://img.icons8.com/pastel-glyph/64/000000/marker--v2.png" alt="marker--v2"/>
     <p id="location"></p> 
-    <p id="country"></p> 
+    <p id="country"></p>
+   
 
     <div id="citySearch">
-        <img width="30" height="30" src="https://img.icons8.com/ios/50/search-in-cloud.png" alt="search-in-cloud"/>
+        <img width="30" height="30" src="https://img.icons8.com/ios/50/search-in-cloud.png" alt="search-in-cloud" id="iconSearch"/>
         <input type="text" id="txtSearch"> 
         <input type="button" id = "btnSearch" value="Search City" onclick="getUserTypedWeather()">
     </div>
