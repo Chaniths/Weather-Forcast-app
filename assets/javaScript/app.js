@@ -11,7 +11,7 @@ const hourleyDiv = document.getElementById("hourly_forcast");
 const weatherType = document.getElementById("weather_type");
 const date = document.getElementById("date");
 
-
+let isDarkMode = false;
 
 const options = {
   enableHighAccuracy: true,
@@ -220,20 +220,24 @@ function formatDate(dateString) {
 
 function backgroundChange(code){
   
-  const rainyValues = [1240,1189,1063,1195,1009];
-  const snowValues = [1117,1114,1204,1225];
-   if (rainyValues.includes(code)) {
-    document.body.style.backgroundImage = "url('assets/CSS/Rain.mp4')";
-    document.body.style.backgroundSize = "100% 100%";
-   }else if (snowValues.includes(code)) {
-    document.body.style.backgroundImage = "url('assets/CSS/Snow.mp4')";
-    document.body.style.backgroundSize = "100% 100%"
-   }else{
-    document.body.style.backgroundImage = "url('assets/CSS/SunnySky.mp4')";
-    document.body.style.backgroundSize = "100% 100%";
-   }
+  if (isDarkMode === false) {
+    const rainyValues = [1240,1189,1063,1195,1009];
+    const snowValues = [1117,1114,1204,1225];
+    if (rainyValues.includes(code)) {
+      document.body.style.backgroundImage = "url('assets/CSS/Rain.mp4')";
+      document.body.style.backgroundSize = "100% 100%";
+    }else if (snowValues.includes(code)) {
+      document.body.style.backgroundImage = "url('assets/CSS/Snow.mp4')";
+      document.body.style.backgroundSize = "100% 100%"
+    }else{
+      document.body.style.backgroundImage = "url('assets/CSS/SunnySky.mp4')";
+      document.body.style.backgroundSize = "100% 100%";
+    }
+    
+  }
 
 }
+
 
 function ChangeMode() { 
   // Obtains an array of all <link> 
@@ -243,11 +247,13 @@ function ChangeMode() {
 
   // Change the value of href attribute  
   // to change the css sheet. 
-  if (theme.getAttribute('href') == 'assets/CSS/lightTheme.css') { 
+  if (theme.getAttribute('href') == 'assets/CSS/lightTheme.css') {
+      isDarkMode = true; 
       theme.setAttribute('href', 'assets/CSS/darkTheme.css');
       document.body.style.backgroundImage = "url('assets/CSS/DarkTheme.mp4')";
       document.body.style.backgroundSize = "100% 100%"; 
   } else { 
+      isDarkMode = false;
       theme.setAttribute('href','assets/CSS/lightTheme.css'); 
       document.body.style.backgroundImage = "url('assets/CSS/SunnySky.mp4')";
       document.body.style.backgroundSize = "100% 100%"; 
