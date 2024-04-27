@@ -222,7 +222,7 @@ function backgroundChange(code){
   
   if (isDarkMode === false) {
     const rainyValues = [1240,1189,1063,1195,1009];
-    const snowValues = [1117,1114,1204,1225];
+    const snowValues = [1117,1114,1204,1225,1255,1009,1030,1147,1198,1210,1066];
     if (rainyValues.includes(code)) {
       document.body.style.backgroundImage = "url('assets/CSS/Rain.mp4')";
       document.body.style.backgroundSize = "100% 100%";
