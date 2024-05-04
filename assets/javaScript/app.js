@@ -41,6 +41,7 @@ function error(err) {
 function getlocation(){
   navigator.geolocation.getCurrentPosition((position) => {
     getUserLocationWeather(position.coords.latitude, position.coords.longitude);
+    console.log(position.coords.latitude, position.coords.longitude);
     
   });
  
