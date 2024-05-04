@@ -51,7 +51,7 @@ function getlocation(){
 //getting  current weather data from API to current location
 function getUserLocationWeather(latitude,longitude) {
 
-  fetch(`http://api.weatherapi.com/v1/current.json?key=${API}&q=${latitude},${longitude}&aqi=yes`)
+  fetch(`https://api.weatherapi.com/v1/current.json?key=${API}&q=${latitude},${longitude}&aqi=yes`)
   .then(response => response.json())
   .then(data =>{
     displayWeather(data);
@@ -63,7 +63,7 @@ function getUserLocationWeather(latitude,longitude) {
     });
 
   
-  fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API}&q=${latitude},${longitude}&days=3&aqi=yes&alerts=yes`)
+  fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API}&q=${latitude},${longitude}&days=3&aqi=yes&alerts=yes`)
   .then(response => response.json())
   .then(data => {
       displayHourleyData(data)
@@ -83,7 +83,7 @@ function getUserTypedWeather() {
     return;
   }
 
-  fetch(`http://api.weatherapi.com/v1/current.json?key=${API}&q=${city}&aqi=yes`)
+  fetch(`https://api.weatherapi.com/v1/current.json?key=${API}&q=${city}&aqi=yes`)
   .then(response => response.json())
   .then(data =>{
     displayWeather(data);
@@ -95,7 +95,7 @@ function getUserTypedWeather() {
     });
 
   
-  fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API}&q=${city}&days=3&aqi=yes&alerts=yes`)
+  fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API}&q=${city}&days=3&aqi=yes&alerts=yes`)
   .then(response => response.json())
   .then(data => {
       displayHourleyData(data)
