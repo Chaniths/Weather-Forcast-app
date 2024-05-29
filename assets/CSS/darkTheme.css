@@ -1,21 +1,21 @@
-body{
+body {
     background-image: url('DarkTheme.mp4');
     background-size: 100% 100%;
 }
 
 #location,
-#country{
+#country {
     font-size: x-large;
-    color: rgb(255, 255, 255);       
+    color: rgb(255, 255, 255);
 }
 
-#imgLocationIcon{
+#imgLocationIcon {
     float: left;
     color: aliceblue;
 }
 
 
-#ChangeMode{
+#ChangeMode {
     float: right;
     border-radius: 10px;
     background-color: rgb(204, 227, 247);
@@ -23,31 +23,31 @@ body{
 }
 
 
-#btnSearch{
+#btnSearch {
     background-color: rgb(223, 230, 236);
     font-size: medium;
     border-radius: 10px;
 }
 
-#tempretute{
+#tempretute {
     font-size: 200px;
     font-weight: bold;
     margin-bottom: -40px;
     color: aliceblue;
-    
+
 }
 
-#date{
+#date {
     font-size: larger;
     font-style: italic;
     font-weight: bolder;
     padding-left: 60px;
     margin-bottom: -200px;
     color: aliceblue;
-   
+
 }
 
-#weather_type{
+#weather_type {
     font-size: larger;
     font-style: italic;
     font-weight: bolder;
@@ -55,11 +55,11 @@ body{
     color: aliceblue;
 }
 
-#citySearch{
+#citySearch {
     float: right;
 }
 
-#txtSearch{
+#txtSearch {
     margin-left: 10px;
     height: 30px;
     width: 200px;
@@ -68,10 +68,10 @@ body{
     font-size: 20px;
     text-align: center;
     color: rgb(28, 29, 30);
-    
+
 }
 
-#top{
+#top {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -80,19 +80,19 @@ body{
     margin-right: 100px;
 }
 
-#weather_icon{
+#weather_icon {
     width: 150px;
-    height:150px;
+    height: 150px;
     margin: 0 auto 10px;
     margin-bottom: 0;
     display: none;
 }
 
-#subtemp{
+#subtemp {
     display: inline-block;
 }
 
-#hourly_forcast{
+#hourly_forcast {
     margin-top: 50px;
     overflow-x: auto;
     white-space: nowrap;
@@ -101,17 +101,26 @@ body{
     padding: 20px;
     margin: 20px 0;
     background: rgba(182, 178, 178, 0.778);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 1px );
-    -webkit-backdrop-filter: blur( 1px );
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
 
 }
 
-#hourly_items
-{
-    flex:  0 0 auto;
+#map-dir {
+
+    border: 1px solid black;
+    padding: 0;
+    margin: 0;
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+}
+
+#hourly_items {
+    flex: 0 0 auto;
     width: 80px;
     display: flex;
     flex-direction: column;
@@ -122,22 +131,19 @@ body{
 
 }
 
-#hourly_items:hover{
+#hourly_items:hover {
     background-color: rgb(139, 188, 236);
     border-radius: 10px;
-    
+
 }
 
-.hourley_items img{
+.hourley_items img {
     width: 30px;
     height: 30px;
     margin: 10px;
 }
 
-#hourley_heading{
+#hourley_heading {
     color: aliceblue;
 
 }
-
-
-
